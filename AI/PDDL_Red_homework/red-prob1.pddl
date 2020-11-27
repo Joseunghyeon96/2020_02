@@ -7,13 +7,13 @@
 (:init
     (person red) (person granny) (at red home) (at wolf woods)
     (location home) (location granny-house) (location woods)  
-    (know-path red woods) (alive red)(alive wolf)
+    (know-path red woods) (alive wolf) (alive granny) (alive red)
     (know-path red granny-house)
 )
 
-(:goal (and (know-path wolf granny-house))
+(:goal (and (greeting red wolf) (at red granny-house)
+))
 
 ;un-comment the following line if metric is needed
 ;(:metric minimize (???))
-)
 )
