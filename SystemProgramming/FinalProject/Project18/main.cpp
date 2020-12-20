@@ -107,10 +107,12 @@ int main()
 	thread sumFunc3(GetSum,arr,ref(sum),ref(m[2]),20);
 	thread printFunc(PrintSumAver, ref(sum), m);
 
+
 	sumFunc1.join();
 	sumFunc2.join();
 	sumFunc3.join();
 	printFunc.join();
+
 
 
 	return 0;
